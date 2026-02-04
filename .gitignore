@@ -1,0 +1,50 @@
+# ===== Visual Studio / MSVC =====
+.vs/
+[Bb]in/
+[Oo]bj/
+x64/
+x86/
+Debug/
+Release/
+*.VC.db
+*.VC.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ipch
+*.pdb
+*.ilk
+*.tlog
+*.log
+
+# CMake (si usas)
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+out/
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ===== Datasets / outputs (si aplica) =====
+*.csv
+*.wav
+*.mid
+*.midi
+*.npy
+*.npz
+
+# ===== OS =====
+.DS_Store
+Thumbs.db

@@ -1,0 +1,54 @@
+{
+  "folders": [
+    {
+      "path": "arduino-firmware",
+      "name": "🔧 Arduino Firmware"
+    },
+    {
+      "path": "dsp-processor",
+      "name": "🐍 DSP Processor"
+    },
+    {
+      "path": "docs",
+      "name": "📚 Documentation"
+    },
+    {
+      "path": "../PlatformIO/Projects/EEG MIDI"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.pio": true,
+      "**/__pycache__": true,
+      "**/venv": true,
+      "**/.pytest_cache": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/.venv": true,
+      "**/__pycache__": true
+    },
+    "editor.formatOnSave": true,
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
+    },
+    "[cpp]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "java.project.sourcePaths": [
+      ""
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "platformio.platformio-ide",
+      "ms-vscode.cpptools",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "charliermarsh.ruff",
+      "eamodio.gitlens",
+      "ms-vscode.makefile-tools"
+    ]
+  }
+}

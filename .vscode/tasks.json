@@ -1,0 +1,156 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🔧 Arduino: Build",
+      "type": "shell",
+      "command": "platformio",
+      "args": [
+        "run",
+        "-d",
+        "arduino-firmware"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🔧 Arduino: Upload",
+      "type": "shell",
+      "command": "platformio",
+      "args": [
+        "run",
+        "-d",
+        "arduino-firmware",
+        "-t",
+        "upload"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "🔧 Arduino: Serial Monitor",
+      "type": "shell",
+      "command": "platformio",
+      "args": [
+        "device",
+        "monitor",
+        "-d",
+        "arduino-firmware",
+        "--port",
+        "COM3",
+        "--baud",
+        "115200"
+      ],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "🐍 DSP: Run Demo (Synthetic Data)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "dsp-processor/src/main.py",
+        "--demo"
+      ],
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "🐍 DSP: Run Real (COM3)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "dsp-processor/src/main.py",
+        "--port",
+        "COM3"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "🐍 DSP: Run Tests",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "pytest",
+        "dsp-processor/tests/",
+        "-v",
+        "--tb=short"
+      ],
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "🐍 DSP: Install Dependencies",
+      "type": "shell",
+      "command": "pip",
+      "args": [
+        "install",
+        "-r",
+        "dsp-processor/requirements.txt"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "📚 Open Protocol Documentation",
+      "type": "shell",
+      "command": "code",
+      "args": [
+        "docs/protocol.md"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      }
+    },
+    {
+      "label": "📚 Open Architecture Documentation",
+      "type": "shell",
+      "command": "code",
+      "args": [
+        "docs/architecture.md"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      }
+    },
+    {
+      "label": "🧹 Clean Build Artifacts",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Remove-Item -Recurse -Force arduino-firmware/.pio -ErrorAction SilentlyContinue; Remove-Item -Recurse -Force dsp-processor/__pycache__ -ErrorAction SilentlyContinue; Remove-Item -Recurse -Force dsp-processor/.pytest_cache -ErrorAction SilentlyContinue; Write-Host '✓ Cleaned build artifacts'"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    }
+  ]
+}
