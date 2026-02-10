@@ -1,7 +1,0 @@
-{
-  "tests/test_data_receiver.py::TestDataReceiver::test_conversion_to_voltage": true,
-  "tests/test_data_receiver.py::TestDataReceiver::test_frame_size": true,
-  "tests/test_data_receiver.py::TestDataReceiver::test_parse_frame_structure": true,
-  "tests/test_data_receiver.py::TestSignalProcessor::test_processor_initialization": true,
-  "tests/test_data_receiver.py": true
-}
