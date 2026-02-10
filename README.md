@@ -52,13 +52,11 @@ platformio run --target upload
 ```
 
 ### DSP (Python)
-```bash
-python -m venv .venv
-.\.venv\Scripts\activate
-pip install -r requirements.txt
-```
+
 ```bash
 cd dsp-processor
+python -m venv .venv
+.\.venv\Scripts\activate
 pip install -r requirements.txt
 python src/main.py
 ```
