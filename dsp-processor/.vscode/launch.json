@@ -1,0 +1,76 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": "${command:pickArgs}"
+        },
+        {
+            "name": "DSP Main (Serial Real)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--port",
+                "COM3",
+                "--baudrate",
+                "115200"
+            ]
+        },
+        {
+            "name": "DSP Demo (Datos Sintéticos)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--demo"
+            ]
+        },
+        {
+            "name": "Run Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "console": "integratedTerminal",
+            "args": [
+                "tests/",
+                "-v",
+                "--tb=short"
+            ]
+        },
+        {
+            "name": "Debug EDF -> MIDI (main_eeg_to_midi)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main_eeg_to_midi.py",
+            "console": "integratedTerminal",
+            "args": [
+                "C:\\Users\\PC\\Documents\\EEG-MIDI-System\\dsp-processor\\mathrecordingeeg\\Subject00_1.edf",
+                "..\\output_midis",
+                "--channels",
+                "EEG Fp1",
+                "EEG Fp2",
+                "EEG C3",
+                "EEG O1",
+                "--bars",
+                "32",
+                "--family",
+                "World",
+                "--scale_name",
+                "Bhairav (India, simplified)",
+                "--root",
+                "C4",
+                "--main_note",
+                "C4",
+                "--bpm",
+                "120"
+            ]
+        }
+    ]
+}

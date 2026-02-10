@@ -1,0 +1,6 @@
+[
+  "tests/test_data_receiver.py::TestDataReceiver::test_conversion_to_voltage",
+  "tests/test_data_receiver.py::TestDataReceiver::test_frame_size",
+  "tests/test_data_receiver.py::TestDataReceiver::test_parse_frame_structure",
+  "tests/test_data_receiver.py::TestSignalProcessor::test_processor_initialization"
+]

@@ -1,0 +1,19 @@
+# .gitignore para DSP Processor
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+.vscode/.pytype/
+*.log
+.DS_Store
+*.csv
